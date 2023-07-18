@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+      <div class="col-md-6">
+          <br><br>
+                  <h1 style="text-align:center;color:blue;font-family:sans-serif;font-size:25px;"><u>Details</u></h1><br>
+          <div class="shadow card">
+                      <div class="card-body">
+                          <h6 class="card-title">{{task.name}}</h6>
+                          <h6>{{task.priority}}</h6><br>
+                          <h6>{{task.date}}</h6><br>
+                          <a class="btn btn-danger" href="{% url 'todoapp:cbvdelete' task.id %}" style="margin-left:10px;">Done</a>
+                          <a class="btn btn-info" href="{% url 'todoapp:cbvupdate' task.id %}" style="margin-left:30px;">Update</a>
+                      </div>
+              </div>
+                  <br>
+          </div>
+
+</body>
+</html>
+{% endblock %}
